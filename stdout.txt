@@ -1,0 +1,834 @@
+(cd lib9; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a convD2M.o convM2D.o convM2S.o convS2M.o fcallfmt.o runestrchr.o runestrlen.o runetype.o strtoll.o strtoull.o rune.o argv0.o charstod.o cistrcmp.o cistrncmp.o cistrstr.o cleanname.o create.o dirwstat.o dofmt.o dorfmt.o errfmt.o exits.o fmt.o fmtfd.o fmtlock.o fmtprint.o fmtquote.o fmtrune.o fmtstr.o fmtvprint.o fprint.o getfields.o nulldir.o pow10.o print.o qsort.o readn.o rerrstr.o runeseprint.o runesmprint.o runesnprint.o runevseprint.o seek.o seprint.o smprint.o snprint.o sprint.o strdup.o strecpy.o sysfatal.o tokenize.o u16.o u32.o u64.o utflen.o utfnlen.o utfrrune.o utfrune.o utfecpy.o vfprint.o vseprint.o vsmprint.o vsnprint.o dirstat-posix.o errstr-posix.o getuser-posix.o getcallerpc-MacOSX-386.o setfcr-MacOSX-386.o getwd-posix.o sbrk-posix.o isnan-posix.o
+(cd libbio; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a bbuffered.o bfildes.o bflush.o bgetrune.o bgetc.o bgetd.o binit.o boffset.o bprint.o bputrune.o bputc.o brdline.o brdstr.o bread.o bseek.o bvprint.o bwrite.o
+(cd libmp; mk  install)
+(cd port; mk  SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmp.a mpaux.o mpfmt.o strtomp.o mptobe.o mptole.o betomp.o letomp.o mpadd.o mpsub.o mpcmp.o mpfactorial.o mpmul.o mpleft.o mpright.o mpvecadd.o mpvecsub.o mpvecdigmuladd.o mpveccmp.o mpdigdiv.o mpdiv.o mpexp.o mpmod.o mpextendedgcd.o mpinvert.o mprand.o crt.o mptoi.o mptoui.o mptov.o mptouv.o
+(cd libsec; mk  install)
+(cd port; mk  SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libsec.a des.o desmodes.o desECB.o desCBC.o des3ECB.o des3CBC.o aes.o blowfish.o idea.o hmac.o md5.o md5block.o md4.o sha1.o sha1block.o sha2.o sha256block.o sha512block.o sha1pickle.o md5pickle.o rc4.o genrandom.o prng.o fastrand.o nfastrand.o probably_prime.o smallprimetest.o genprime.o dsaprimes.o gensafeprime.o genstrongprime.o rsagen.o rsafill.o rsaencrypt.o rsadecrypt.o rsaalloc.o rsaprivtopub.o eggen.o egencrypt.o egdecrypt.o egalloc.o egprivtopub.o egsign.o egverify.o dsagen.o dsaalloc.o dsaprivtopub.o dsasign.o dsaverify.o
+(cd libmath; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a blas.o dtoa.o fdim.o FPcontrol-MacOSX.o gemm.o g_fmt.o gfltconv.o pow10.o e_acos.o e_acosh.o e_asin.o e_atan2.o e_atanh.o e_cosh.o e_exp.o e_fmod.o e_hypot.o e_j0.o e_j1.o e_jn.o e_lgamma_r.o e_log.o e_log10.o e_pow.o e_rem_pio2.o e_remainder.o e_sinh.o e_sqrt.o k_cos.o k_rem_pio2.o k_sin.o k_tan.o s_asinh.o s_atan.o s_cbrt.o s_ceil.o s_copysign.o s_cos.o s_erf.o s_expm1.o s_fabs.o s_finite.o s_floor.o s_ilogb.o s_log1p.o s_nextafter.o s_rint.o s_scalbn.o s_sin.o s_tan.o s_tanh.o
+(cd utils/iyacc; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out yacc.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iyacc && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iyacc
+(cd limbo; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o com.o decls.o dis.o dtocanon.o ecom.o gen.o lex.o nodes.o optab.o optim.o sbl.o stubs.o typecheck.o types.o y.tab.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libsec.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmp.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)object file (com.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (decls.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (dis.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (dtocanon.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (ecom.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+ld: warning: object file (gen.o) was built for newer OSX version (10.6) than being linked (10.4)object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)object file (nodes.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+
+ld: warning: ld: warning: object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)object file (optim.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: ld: warning: object file (sbl.o) was built for newer OSX version (10.6) than being linked (10.4)object file (stubs.o) was built for newer OSX version (10.6) than being linked (10.4)object file (typecheck.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+
+ld: warning: ld: warning: object file (types.o) was built for newer OSX version (10.6) than being linked (10.4)object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/limbo && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/limbo
+(cd libinterp; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a alt.o comp-386.o conv.o crypt.o dec.o dlm-Posix.o draw.o freetype.o gc.o geom.o heap.o heapaudit.o ipint.o link.o load.o loader.o math.o raise.o readmod.o runt.o sign.o stack.o tk.o validstk.o xec.o das-386.o keyring.o string.o
+(cd libkeyring; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a dsaalg.o egalg.o rsaalg.o
+(cd libdraw; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a alloc.o allocimagemix.o arith.o bezier.o border.o buildfont.o bytesperline.o chan.o cloadimage.o computil.o creadimage.o defont.o draw.o drawrepl.o ellipse.o font.o freesubfont.o getdefont.o getsubfont.o init.o line.o mkfont.o openfont.o poly.o loadimage.o readcolmap.o readimage.o readsubfont.o rectclip.o replclipr.o rgb.o string.o stringbg.o stringsubfont.o stringwidth.o subfont.o subfontcache.o subfontname.o unloadimage.o window.o writecolmap.o writeimage.o writesubfont.o
+(cd libprefab; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libprefab.a box.o compound.o element.o elistelement.o iconbox.o iconelement.o textbox.o textelement.o
+(cd libtk; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a ebind.o grids.o image.o packr.o panel.o parse.o utils.o varbl.o windw.o xdata.o canvs.o canvu.o carcs.o cbits.o cimag.o cline.o coval.o cpoly.o crect.o ctext.o cwind.o colrs.o entry.o extns.o frame.o buton.o label.o listb.o menus.o scale.o scrol.o textu.o textw.o tindx.o tmark.o ttags.o twind.o
+(cd libfreetype; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a freetype.o autohint.o ftbase.o ftglyph.o cff.o psaux.o psnames.o raster.o sfnt.o smooth.o truetype.o type1.o type42.o ftsystem_inf.o ftinit.o pshinter.o pfr.o
+(cd libmemdraw; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a arc.o cmap.o cread.o defont.o ellipse.o fillpoly.o hwdraw.o icossin.o icossin2.o iprint.o line.o openmemsubfont.o poly.o read.o string.o subfont.o write.o alloc.o cload.o draw.o load.o unload.o
+(cd libmemlayer; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a draw.o layerop.o ldelete.o lhide.o line.o load.o lorigin.o lsetrefresh.o ltofront.o ltorear.o unload.o lalloc.o
+(cd libdynld; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdynld.a dynld-386.o dynloadfd.o dynld.o
+(cd asm; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out lex.o assem.o y.tab.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (assem.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/asm && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/asm
+(cd utils/data2c; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out data2c.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (data2c.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2c && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2c
+(cd utils/ndate; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ndate.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ndate.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ndate && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ndate
+(cd emu; mk  install)
+(cd MacOSX; mk  install)
+/bin/sh ../port/mkroot emu
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libinterp ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a alt.o comp-386.o conv.o crypt.o dec.o dlm-Posix.o draw.o freetype.o gc.o geom.o heap.o heapaudit.o ipint.o link.o load.o loader.o math.o raise.o readmod.o runt.o sign.o stack.o tk.o validstk.o xec.o das-386.o keyring.o string.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libtk ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a ebind.o grids.o image.o packr.o panel.o parse.o utils.o varbl.o windw.o xdata.o canvs.o canvu.o carcs.o cbits.o cimag.o cline.o coval.o cpoly.o crect.o ctext.o cwind.o colrs.o entry.o extns.o frame.o buton.o label.o listb.o menus.o scale.o scrol.o textu.o textw.o tindx.o tmark.o ttags.o twind.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libfreetype ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a freetype.o autohint.o ftbase.o ftglyph.o cff.o psaux.o psnames.o raster.o sfnt.o smooth.o truetype.o type1.o type42.o ftsystem_inf.o ftinit.o pshinter.o pfr.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libmath ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a blas.o dtoa.o fdim.o FPcontrol-MacOSX.o gemm.o g_fmt.o gfltconv.o pow10.o e_acos.o e_acosh.o e_asin.o e_atan2.o e_atanh.o e_cosh.o e_exp.o e_fmod.o e_hypot.o e_j0.o e_j1.o e_jn.o e_lgamma_r.o e_log.o e_log10.o e_pow.o e_rem_pio2.o e_remainder.o e_sinh.o e_sqrt.o k_cos.o k_rem_pio2.o k_sin.o k_tan.o s_asinh.o s_atan.o s_cbrt.o s_ceil.o s_copysign.o s_cos.o s_erf.o s_expm1.o s_fabs.o s_finite.o s_floor.o s_ilogb.o s_log1p.o s_nextafter.o s_rint.o s_scalbn.o s_sin.o s_tan.o s_tanh.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libdraw ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a alloc.o allocimagemix.o arith.o bezier.o border.o buildfont.o bytesperline.o chan.o cloadimage.o computil.o creadimage.o defont.o draw.o drawrepl.o ellipse.o font.o freesubfont.o getdefont.o getsubfont.o init.o line.o mkfont.o openfont.o poly.o loadimage.o readcolmap.o readimage.o readsubfont.o rectclip.o replclipr.o rgb.o string.o stringbg.o stringsubfont.o stringwidth.o subfont.o subfontcache.o subfontname.o unloadimage.o window.o writecolmap.o writeimage.o writesubfont.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libmemlayer ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a draw.o layerop.o ldelete.o lhide.o line.o load.o lorigin.o lsetrefresh.o ltofront.o ltorear.o unload.o lalloc.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libmemdraw ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a arc.o cmap.o cread.o defont.o ellipse.o fillpoly.o hwdraw.o icossin.o icossin2.o iprint.o line.o openmemsubfont.o poly.o read.o string.o subfont.o write.o alloc.o cload.o draw.o load.o unload.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libkeyring ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a dsaalg.o egalg.o rsaalg.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libsec ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+(cd port; mk  SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libsec.a des.o desmodes.o desECB.o desCBC.o des3ECB.o des3CBC.o aes.o blowfish.o idea.o hmac.o md5.o md5block.o md4.o sha1.o sha1block.o sha2.o sha256block.o sha512block.o sha1pickle.o md5pickle.o rc4.o genrandom.o prng.o fastrand.o nfastrand.o probably_prime.o smallprimetest.o genprime.o dsaprimes.o gensafeprime.o genstrongprime.o rsagen.o rsafill.o rsaencrypt.o rsadecrypt.o rsaalloc.o rsaprivtopub.o eggen.o egencrypt.o egdecrypt.o egalloc.o egprivtopub.o egsign.o egverify.o dsagen.o dsaalloc.o dsaprivtopub.o dsasign.o dsaverify.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libmp ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+(cd port; mk  SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmp.a mpaux.o mpfmt.o strtomp.o mptobe.o mptole.o betomp.o letomp.o mpadd.o mpsub.o mpcmp.o mpfactorial.o mpmul.o mpleft.o mpright.o mpvecadd.o mpvecsub.o mpvecdigmuladd.o mpveccmp.o mpdigdiv.o mpdiv.o mpexp.o mpmod.o mpextendedgcd.o mpinvert.o mprand.o crt.o mptoi.o mptoui.o mptov.o mptouv.o
+(cd /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/lib9 ; mk SHELLTYPE=sh SYSTARG=MacOSX OBJTYPE=386 install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a convD2M.o convM2D.o convM2S.o convS2M.o fcallfmt.o runestrchr.o runestrlen.o runetype.o strtoll.o strtoull.o rune.o argv0.o charstod.o cistrcmp.o cistrncmp.o cistrstr.o cleanname.o create.o dirwstat.o dofmt.o dorfmt.o errfmt.o exits.o fmt.o fmtfd.o fmtlock.o fmtprint.o fmtquote.o fmtrune.o fmtstr.o fmtvprint.o fprint.o getfields.o nulldir.o pow10.o print.o qsort.o readn.o rerrstr.o runeseprint.o runesmprint.o runesnprint.o runevseprint.o seek.o seprint.o smprint.o snprint.o sprint.o strdup.o strecpy.o sysfatal.o tokenize.o u16.o u32.o u64.o utflen.o utfnlen.o utfrrune.o utfrune.o utfecpy.o vfprint.o vseprint.o vsmprint.o vsnprint.o dirstat-posix.o errstr-posix.o getuser-posix.o getcallerpc-MacOSX-386.o setfcr-MacOSX-386.o getwd-posix.o sbrk-posix.o isnan-posix.o
+cc -c -m32 -DROOT="/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno" -DOBJTYPE="386" -DEMU -I. -I../port -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libinterp -arch i386 -m32 -mmacosx-version-min=10.6 -Wno-deprecated-declarations -Wuninitialized -Wunused -Wreturn-type -Wimplicit -Wno-four-char-constants -Wno-unknown-pragmas -pipe -fno-strict-aliasing -no-cpp-precomp -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -Os emu.root.c
+	cc -c -m32 -DROOT="/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno" -DOBJTYPE="386" -DEMU -I. -I../port -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libinterp -arch i386 -m32 -mmacosx-version-min=10.6 -Wno-deprecated-declarations -Wuninitialized -Wunused -Wreturn-type -Wimplicit -Wno-four-char-constants -Wno-unknown-pragmas -pipe -fno-strict-aliasing -no-cpp-precomp -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -Os -I. ../port/devroot.c
+In file included from ../port/devroot.c:1:
+../port/dat.h:99:26: warning: '/*' within block comment [-Wcomment]
+/*rsc   CCREATE = 0x0004,               /* permits creation if c->mnt */
+                                        ^
+1 warning generated.
+cc -c -m32 -DROOT="/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno" -DOBJTYPE="386" -DEMU -I. -I../port -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/libinterp -arch i386 -m32 -mmacosx-version-min=10.6 -Wno-deprecated-declarations -Wuninitialized -Wunused -Wreturn-type -Wimplicit -Wno-four-char-constants -Wno-unknown-pragmas -pipe -fno-strict-aliasing -no-cpp-precomp -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/include -I/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/include -Os '-DKERNDATE='1453763203 emu.c
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.emu asm-386.o os.o emu.root.o lock.o win.o devdraw.o devssl.o devprof.o devmnt.o devsnarf.o devmem.o devpointer.o devdup.o devenv.o devprog.o devindir.o ipif-posix.o devsrv.o devcap.o srv.o deveia.o devcons.o devcmd.o cmd.o devip.o ipaux.o devpipe.o devfs.o devroot.o latin1.o errstr.o print.o dis.o dial.o chan.o random.o error.o env.o pgrp.o parse.o discall.o devtab.o dev.o exception.o uqid.o proc.o qio.o exportfs.o sysfile.o alloc.o cache.o main.o inferno.o emu.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libsec.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmp.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a -lm -framework Carbon -framework QuickTime -lpthread -framework CoreFoundation -framework IOKit
+In file included from emu.c:1:
+../port/dat.h:99:26: warning: '/*' within block comment [-Wcomment]
+/*rsc   CCREATE = 0x0004,               /* permits creation if c->mnt */
+                                        ^
+1 warning generated.
+ld: warning: ld: warning: object file (os.o) was built for newer OSX version (10.6) than being linked (10.4)object file (emu.root.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (lock.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: object file (win.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (devdraw.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (devssl.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (devprof.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (devmnt.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devsnarf.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (devmem.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (devpointer.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devdup.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (devenv.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (devprog.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: object file (devindir.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (ipif-posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (devsrv.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devcap.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: ld: warning: object file (srv.o) was built for newer OSX version (10.6) than being linked (10.4)object file (deveia.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devcons.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: 
+
+object file (devcmd.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (cmd.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devip.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (ipaux.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (devpipe.o) was built for newer OSX version (10.6) than being linked (10.4)object file (devfs.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (devroot.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (latin1.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (errstr.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: object file (print.o) was built for newer OSX version (10.6) than being linked (10.4)object file (dis.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (dial.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: object file (chan.o) was built for newer OSX version (10.6) than being linked (10.4)object file (random.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (error.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (env.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: ld: warning: object file (parse.o) was built for newer OSX version (10.6) than being linked (10.4)object file (pgrp.o) was built for newer OSX version (10.6) than being linked (10.4)object file (discall.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: 
+
+object file (devtab.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: object file (dev.o) was built for newer OSX version (10.6) than being linked (10.4)object file (exception.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: 
+object file (uqid.o) was built for newer OSX version (10.6) than being linked (10.4)object file (proc.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (qio.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: object file (exportfs.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (sysfile.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (alloc.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (cache.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (main.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: object file (inferno.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (emu.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(conv.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(arith.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(heap.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(alloc.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(alt.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(runt.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(bytesperline.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(string.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(chan.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(xec.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(crypt.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(dec.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(draw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(drawrepl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(raise.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(freetype.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(gc.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(ipint.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(keyring.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(load.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(loader.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(math.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(arc.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(draw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(ellipse.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(draw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(fillpoly.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(lalloc.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(ldelete.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(line.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(line.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(lorigin.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(load.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(lsetrefresh.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(ltofront.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(ltorear.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(poly.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(unload.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(link.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(stack.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(rectclip.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(tk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(geom.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(xdata.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(layerop.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(cmap.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(alloc.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(allocimagemix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(window.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(ellipse.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(bezier.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(border.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(buildfont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(cload.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(init.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(rgb.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(comp-386.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(draw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a(dsaalg.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a(egalg.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(poly.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(dlm-Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(freetype.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(getdefont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(hwdraw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(icossin.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(icossin2.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(line.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(loadimage.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(load.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemlayer.a(lhide.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(sign.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(openfont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(readimage.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(readmod.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(replclipr.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libkeyring.a(rsaalg.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(stringbg.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(string.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(stringwidth.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(utils.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(menus.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(windw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(panel.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(image.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(parse.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(packr.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(unloadimage.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmemdraw.a(unload.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(writeimage.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(ftbase.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(ftinit.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(computil.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(getsubfont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(defont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(font.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(subfont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(canvs.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(buton.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(creadimage.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libinterp.a(das-386.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(entry.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(frame.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(label.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(listb.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(scale.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(scrol.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(textw.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(ebind.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(canvu.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(extns.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(grids.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(colrs.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(varbl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(ftsystem_inf.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(autohint.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(cff.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(raster.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(smooth.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(pfr.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(psaux.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(pshinter.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(psnames.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libdraw.a(readsubfont.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(sfnt.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(type1.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(type42.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(carcs.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(cbits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(cwind.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(cimag.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(cline.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(coval.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(cpoly.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(crect.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(ctext.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(textu.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(tmark.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(ttags.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(tindx.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libtk.a(twind.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(truetype.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libfreetype.a(ftglyph.o)) was built for newer OSX version (10.6) than being linked (10.4)
+cp o.emu /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/emu
+(cd appl; mk  install)
+(cd acme; mk  install)
+(cd acme; mk  install)
+(cd acid; mk  install)
+(cd src; mk  install)
+mk: 'install' is up to date
+(cd bin; mk  install)
+(cd src; mk  install)
+mk: 'install' is up to date
+(cd edit; mk  install)
+(cd src; mk  install)
+mk: 'install' is up to date
+(cd mail; mk  install)
+(cd src; mk  install)
+mk: 'install' is up to date
+(cd charon; mk  install)
+mk: 'install' is up to date
+(cd cmd; mk  install)
+(cd auth; mk  install)
+(cd factotum; mk  install)
+(cd proto; mk  install)
+mk: 'install' is up to date
+(cd auxi; mk  install)
+mk: 'install' is up to date
+(cd avr; mk  install)
+mk: 'install' is up to date
+(cd disk; mk  install)
+(cd prep; mk  install)
+mk: 'install' is up to date
+(cd fs; mk  install)
+mk: 'install' is up to date
+(cd install; mk  install)
+mk: 'install' is up to date
+(cd ip; mk  install)
+(cd ppp; mk  install)
+mk: 'install' is up to date
+(cd lego; mk  install)
+mk: 'install' is up to date
+(cd limbo; mk  install)
+mk: 'install' is up to date
+(cd mash; mk  install)
+mk: 'install' is up to date
+(cd mk; mk  install)
+mk: 'install' is up to date
+(cd mpc; mk  install)
+mk: 'install' is up to date
+(cd ndb; mk  install)
+mk: 'install' is up to date
+(cd sh; mk  install)
+cp /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/dis/sh/sh.dis /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/dis/sh/..
+(cd spki; mk  install)
+mk: 'install' is up to date
+(cd usb; mk  install)
+mk: 'install' is up to date
+(cd collab; mk  install)
+mk: 'install' is up to date
+(cd demo; mk  install)
+(cd camera; mk  install)
+mk: 'install' is up to date
+(cd chat; mk  install)
+mk: 'install' is up to date
+(cd cpupool; mk  install)
+mk: 'install' is up to date
+(cd lego; mk  install)
+mk: 'install' is up to date
+(cd ns; mk  install)
+mk: 'install' is up to date
+(cd odbc; mk  install)
+mk: 'install' is up to date
+(cd spree; mk  install)
+mk: 'install' is up to date
+(cd whiteboard; mk  install)
+mk: 'install' is up to date
+(cd ebook; mk  install)
+mk: 'install' is up to date
+(cd grid; mk  install)
+(cd demo; mk  install)
+mk: 'install' is up to date
+(cd lib; mk  install)
+mk: 'install' is up to date
+(cd lib; mk  install)
+(cd convcs; mk  install)
+mk: 'install' is up to date
+(cd crypt; mk  install)
+mk: 'install' is up to date
+(cd ecmascript; mk  install)
+mk: 'install' is up to date
+(cd encoding; mk  install)
+mk: 'install' is up to date
+(cd ida; mk  install)
+mk: 'install' is up to date
+(cd print; mk  install)
+mk: 'install' is up to date
+(cd spki; mk  install)
+mk: 'install' is up to date
+(cd strokes; mk  install)
+mk: 'install' is up to date
+(cd styxconv; mk  install)
+mk: 'install' is up to date
+(cd usb; mk  install)
+mk: 'install' is up to date
+(cd w3c; mk  install)
+mk: 'install' is up to date
+(cd math; mk  install)
+mk: 'install' is up to date
+(cd spree; mk  install)
+mk: 'install' is up to date
+(cd svc; mk  install)
+(cd httpd; mk  install)
+for i in httpd.debug httpd.log httpd.rewrite httpd.suff
+do
+	rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/httpd/$i && cp $i /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/httpd/$i
+done
+# chmod 644 /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/httpd/httpd.log
+(cd webget; mk  install)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/webget/webget.log && cp webget.log /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/webget/webget.log
+# chmod 644 /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/services/webget/webget.log
+(cd tiny; mk  install)
+mk: 'install' is up to date
+(cd wm; mk  install)
+(cd brutus; mk  install)
+mk: 'install' is up to date
+(cd drawmux; mk  install)
+mk: 'install' is up to date
+(cd ftree; mk  install)
+mk: 'install' is up to date
+(cd mpeg; mk  install)
+mk: 'install' is up to date
+(cd utils; mk  install)
+(cd libmach; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a 4.o 5.o 6.o 8.o 9.o k.o q.o t.o v.o 5db.o 8db.o kdb.o qdb.o tdb.o vdb.o 5obj.o 6obj.o 8obj.o 9obj.o kobj.o qobj.o vobj.o obj.o map.o swap.o sym.o access.o machdata.o setmach.o executable.o vcodas.o
+(cd libregexp; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libregexp.a regcomp.o regerror.o regexec.o regsub.o regaux.o rregexec.o rregsub.o
+(cd iyacc; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out yacc.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iyacc && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iyacc
+(cd iar; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ar.o Posix.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ar.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iar && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/iar
+(cd cc; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a acid.o bits.o com.o com64.o Posix.o dcl.o dpchk.o funct.o lex.o mac.o mpatof.o pickle.o scon.o sub.o y.tab.o omachcap.o
+(cd 5coff; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out 5coff.o coff.o auxi.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (5coff.o) was built for newer OSX version (10.6) than being linked (10.4)object file (coff.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (auxi.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5coff && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5coff
+(cd 5cv; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out 5cv.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (5cv.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5cv && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5cv
+(cd sqz; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out sqz.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (sqz.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/sqz && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/sqz
+(cd acid; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out main.o y.tab.o lex.o util.o exec.o expr.o list.o builtin.o proc.o dot.o print.o os-Posix.o rdebug.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libregexp.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (main.o) was built for newer OSX version (10.6) than being linked (10.4)object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (util.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (exec.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (expr.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (builtin.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (proc.o) was built for newer OSX version (10.6) than being linked (10.4)object file (dot.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (print.o) was built for newer OSX version (10.6) than being linked (10.4)object file (os-Posix.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (rdebug.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/acid && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/acid
+(cd srclist; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out srclist.o Posix.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (srclist.o) was built for newer OSX version (10.6) than being linked (10.4)object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/srclist && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/srclist
+(cd ftl; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ftl.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ftl.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ftl && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ftl
+(cd ms2; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ms2.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ms2.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ms2 && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ms2
+(cd data2c; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out data2c.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (data2c.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2c && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2c
+(cd data2s; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out data2s.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (data2s.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2s && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/data2s
+(cd idea; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out idea.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (idea.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/idea && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/idea
+(cd kprof; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out kprof.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (kprof.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kprof && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kprof
+(cd c2l; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out acid.o bits.o com.o com64.o Posix.o dcl.o dpchk.o lex.o mac.o mpatof.o out.o scon.o sub.o y.tab.o c2l.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmath.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (acid.o) was built for newer OSX version (10.6) than being linked (10.4)object file (bits.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (com.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (com64.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (dcl.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (dpchk.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)object file (mac.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (mpatof.o) was built for newer OSX version (10.6) than being linked (10.4)object file (out.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (scon.o) was built for newer OSX version (10.6) than being linked (10.4)object file (sub.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (c2l.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/c2l && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/c2l
+(cd mkppcimage; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out mkppcimage.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (mkppcimage.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mkppcimage && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mkppcimage
+(cd nm; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out nm.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (nm.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/inm && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/inm
+(cd 5a; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out y.tab.o lex.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5a && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5a
+(cd 5c; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out cgen.o enam.o list.o mul.o peep.o pgen.o pswt.o reg.o sgen.o swt.o txt.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (cgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (mul.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (peep.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pswt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (sgen.o) was built for newer OSX version (10.6) than being linked (10.4)object file (reg.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (swt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (txt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(scon.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(lex.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(bits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(sub.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com64.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dcl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(acid.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dpchk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(funct.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mac.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mpatof.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(pickle.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(y.tab.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5c && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5c
+(cd 5l; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o list.o noop.o obj.o optab.o pass.o span.o enam.o Posix.o elf.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (obj.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (noop.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pass.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (span.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (elf.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5l && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/5l
+(cd 8a; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out y.tab.o lex.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8a && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8a
+(cd 8c; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out cgen.o enam.o list.o sgen.o swt.o txt.o reg.o peep.o pgen.o pswt.o machcap.o cgen64.o div.o mul.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (cgen.o) was built for newer OSX version (10.6) than being linked (10.4)object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (sgen.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (swt.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (txt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (reg.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (peep.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pgen.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (machcap.o) was built for newer OSX version (10.6) than being linked (10.4)object file (pswt.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (cgen64.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (div.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (mul.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(scon.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(lex.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(bits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(sub.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com64.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dcl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(acid.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dpchk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(funct.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mac.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mpatof.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(pickle.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(y.tab.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8c && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8c
+(cd 8l; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o obj.o optab.o pass.o span.o list.o enam.o Posix.o elf.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (obj.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pass.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (span.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (elf.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8l && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/8l
+(cd qa; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out y.tab.o lex.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/qa && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/qa
+(cd qc; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out cgen.o enam.o list.o machcap.o mul.o peep.o pgen.o pswt.o reg.o sgen.o swt.o txt.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (cgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (machcap.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (mul.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (peep.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pswt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (reg.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (sgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (swt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (txt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(scon.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(lex.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(bits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(sub.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com64.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dcl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(acid.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dpchk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(funct.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mac.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mpatof.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(pickle.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(y.tab.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/qc && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/qc
+(cd ql; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o asmout.o list.o noop.o obj.o optab.o pass.o span.o enam.o cnam.o sched.o Posix.o elf.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (asmout.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (noop.o) was built for newer OSX version (10.6) than being linked (10.4)object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (obj.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pass.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (span.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)object file (cnam.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: object file (sched.o) was built for newer OSX version (10.6) than being linked (10.4)object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (elf.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ql && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ql
+(cd va; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out y.tab.o lex.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/va && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/va
+(cd vc; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out cgen.o enam.o list.o peep.o pgen.o pswt.o reg.o sgen.o swt.o txt.o mul.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (cgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (pgen.o) was built for newer OSX version (10.6) than being linked (10.4)object file (peep.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (pswt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (sgen.o) was built for newer OSX version (10.6) than being linked (10.4)object file (reg.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (swt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (txt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (mul.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(scon.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(lex.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(bits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(sub.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com64.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dcl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(acid.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dpchk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(funct.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mac.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mpatof.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(pickle.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(y.tab.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/vc && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/vc
+(cd vl; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o list.o noop.o sched.o obj.o optab.o pass.o span.o enam.o Posix.o elf.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (sched.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (noop.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (obj.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (pass.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (span.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (elf.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/vl && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/vl
+(cd ka; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out y.tab.o lex.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (y.tab.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ka && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ka
+(cd kc; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out peep.o pgen.o pswt.o reg.o cgen.o enam.o list.o sgen.o swt.o txt.o mul.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (peep.o) was built for newer OSX version (10.6) than being linked (10.4)object file (pgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (pswt.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (reg.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (cgen.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (sgen.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (swt.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (txt.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+object file (mul.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(scon.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(lex.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(bits.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(sub.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com64.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(com.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dcl.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(acid.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(dpchk.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(funct.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mac.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(mpatof.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(pickle.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libcc.a(y.tab.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kc && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kc
+(cd kl; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out asm.o list.o noop.o sched.o obj.o optab.o pass.o span.o enam.o Posix.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (asm.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (list.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (noop.o) was built for newer OSX version (10.6) than being linked (10.4)object file (sched.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+
+object file (obj.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (optab.o) was built for newer OSX version (10.6) than being linked (10.4)object file (pass.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (span.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (enam.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kl && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kl
+(cd mk; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out arc.o archive.o bufblock.o env.o file.o graph.o job.o lex.o main.o match.o mk.o parse.o Posix.o recipe.o rule.o run.o sh.o shprint.o symtab.o var.o varsub.o word.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libregexp.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: ld: warning: object file (arc.o) was built for newer OSX version (10.6) than being linked (10.4)object file (archive.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: object file (bufblock.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (env.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: ld: warning: object file (graph.o) was built for newer OSX version (10.6) than being linked (10.4)object file (file.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: ld: warning: object file (job.o) was built for newer OSX version (10.6) than being linked (10.4)object file (lex.o) was built for newer OSX version (10.6) than being linked (10.4)object file (main.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: 
+object file (match.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: ld: warning: 
+object file (mk.o) was built for newer OSX version (10.6) than being linked (10.4)object file (parse.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: 
+ld: warning: 
+object file (Posix.o) was built for newer OSX version (10.6) than being linked (10.4)object file (recipe.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: 
+ld: warning: object file (rule.o) was built for newer OSX version (10.6) than being linked (10.4)object file (run.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: 
+ld: warning: object file (sh.o) was built for newer OSX version (10.6) than being linked (10.4)ld: warning: object file (shprint.o) was built for newer OSX version (10.6) than being linked (10.4)
+object file (symtab.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+ld: warning: ld: warning: ld: warning: object file (var.o) was built for newer OSX version (10.6) than being linked (10.4)object file (varsub.o) was built for newer OSX version (10.6) than being linked (10.4)object file (word.o) was built for newer OSX version (10.6) than being linked (10.4)
+
+
+test -x /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mk && mv /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mk /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mk.save		#because we are executing it
+cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mk
+(cd ksize; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ksize.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ksize.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ksize && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ksize
+(cd kstrip; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out kstrip.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libmach.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (kstrip.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kstrip && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/kstrip
+(cd md5sum; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out md5sum.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libsec.a 
+ld: warning: object file (md5sum.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/md5sum && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/md5sum
+(cd mkext; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out mkext.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libbio.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (mkext.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mkext && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/mkext
+(cd ndate; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out ndate.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (ndate.o) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ndate && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/ndate
+(cd tools; mk  install)
+(cd libstyx; mk  install)
+ar ruvs /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libstyx.a styxserver.o Posix.o
+(cd styxtest; mk  install)
+cc -arch i386 -m32 -mmacosx-version-min=10.4 -multiply_defined suppress -o o.out styxtest.o /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libstyx.a /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/lib9.a 
+ld: warning: object file (styxtest.o) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libstyx.a(styxserver.o)) was built for newer OSX version (10.6) than being linked (10.4)
+ld: warning: object file (/Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/lib/libstyx.a(Posix.o)) was built for newer OSX version (10.6) than being linked (10.4)
+rm -f /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/styxtest && cp o.out /Users/kellyshiptoski/Desktop/Winter2016/CS370/inferno/MacOSX/386/bin/styxtest
